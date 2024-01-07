@@ -1,0 +1,885 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* OVERRIDING DEFAULT SETTING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* -----------CSS VARIABLES------------ */
+:root {
+    --bg-color: #1f242d;
+    --secondary-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #B581E6;
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+
+}
+
+
+/* HEADER SECTION */
+.header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+/*HEADER-SECTION :: LOGO  */
+
+
+.logo {
+
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: default;
+    font-family: 'Inter', sans-serif;
+}
+
+/* LOGO NAME */
+
+.logo-name {
+    font-weight: 600;
+}
+
+/* NAVBAR */
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: all .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+/* FOR EACH SECTION TAGS */
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+
+
+/* HOME SECTION */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h1 {
+    font-size: 4.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--main-color);
+    user-select: none;
+}
+
+.home-content h3 {
+    font-size: 2.5rem;
+    user-select: none;
+}
+
+.home-content p {
+    font-size: 1.8rem;
+    line-height: 4;
+}
+
+/*  */
+
+.social-connect{
+    animation:float-button 1.5s ease-in-out infinite;
+}
+
+/* DEVELOPER IMAGE */
+
+.home-image img {
+    /* width: 77vw; */
+    width: 40em;
+    height:50em;
+    padding: 50px;
+    /* box-shadow: 0 0 2px var(--text-color); */
+    margin-right: -32rem;
+    transition: all 0.5s;
+}
+
+.home-image img:hover {
+    transform: scale(1.1);
+}
+
+
+/* HOME-SECTION PARAGRAPH */
+
+.home-content p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    user-select: none;
+
+}
+
+/* HOME : h3 2nd CHILD */
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+    user-select: none;
+    font-size: 2.1rem;
+}
+
+/* TYPEWRITER */
+
+span {
+    color: var(--main-color);
+    /* text-shadow: 0 0 0.5em var(--main-color); */
+}
+
+
+
+/* SOCIAL MEDIA  :: ICONS*/
+
+
+
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    font-size: 3rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: all .4s;
+    animation:float-button 1.5s ease-in-out infinite;
+
+    
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--secondary-bg-color);
+    box-shadow: 0 0 1.5 rem var(--main-color);
+    transform: scale(1.1);
+
+}
+
+
+/* RESUME DOWNLOAD BUTTON */
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    animation:float-click-button 1s ease-in infinite;
+
+}
+
+@keyframes float-click-button{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(0.5rem);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+a.btn {
+    font-size: 1.6rem;
+    color: var(--secondary-bg-color);
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+a.btn:hover {
+    transform: scale(1.06);
+}
+
+.btn:hover {
+    box-shadow: none;
+
+}
+
+
+/* ABOUT SECTION */
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* ABOUT id  */
+
+#about {
+    background: var(--secondary-bg-color);
+}
+
+.about-image img {
+    width: 56vw;
+    margin-left: -26rem;
+    transition: all 0.4s
+}
+
+.about-image img:hover {
+
+    transform: scale(1.02);
+}
+
+/* ABOUT ----> HEADING  */
+
+.heading {
+
+    text-align: center;
+    font-size: 4.5rem;
+
+}
+
+.about-content {
+    padding: 2rem 1.5rem 4rem 4rem;
+    background: var(--bg-color);
+    border-radius: 2rem;
+    border: .1rem solid var(--main-color);
+    transition: all .5s;
+    animation:float-image 2s ease-in-out infinite;
+    transition:all 0.5s;
+}
+
+@keyframes float-image {
+
+    0%{
+        transform:translateY(0);
+    }
+    
+    50%{
+        transform:translateY(-1.5rem);
+    }
+    
+    100%{
+        transform:translateY(0);
+    }
+    
+    
+}
+
+.about-content:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+    transform: scale(1.05);
+}
+
+/* ABOUT : ABOUT-CONTENT h2 */
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* ABOUT CONTENT : h3 */
+
+.about-content h3 {
+    font-size: 2.8rem;
+}
+
+/* ABOUT-CONTENT : p */
+
+.about-content p {
+    font-size: 1.7rem;
+    margin: 2rem 0;
+}
+
+
+
+/* PROJECT SECTION  */
+
+
+.projects {
+    background: var(--bg-color);
+    margin-bottom: 5rem;
+}
+
+
+/* PROJECT SECTION HEADING */
+
+.projects h2 {
+    margin-bottom: 7rem;
+}
+
+/* PROJECT CONTAINER  */
+
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 7rem;
+}
+
+
+/* PROJECT BOX */
+
+.project-container .project-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    overflow: hidden;
+    display: flex;
+    transition: all 0.5s;
+    cursor: pointer;
+    animation:float-image 2s ease-in-out infinite;
+
+
+
+}
+
+/* PROJECT-IMAGES */
+
+.project-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.project-box:hover img {
+    transform: scale(1.2);
+}
+
+.project-box:hover {
+    box-shadow: none;
+}
+
+.project-box .project-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(1, 0, 0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+
+    /* TO HIDE FOR IMAGE SCALING AND UPON BOX:HOVER translateY(100%) --> translateY(0) */
+    transition: .5s ease;
+    transform: translateY(100%);
+}
+
+/* PROJECT-LAYER HEADING */
+.project-layer h4 {
+    font-size: 3.2rem;
+}
+
+/* PROJECT-LAYER : CONTENT */
+
+.project-layer p {
+    font-size: 1.7rem;
+    margin: 1rem 2.8rem 0 2.8rem;
+}
+
+/* PROJECT-LAYER : LINKS */
+
+.project-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    margin: 1.5rem 0;
+    transition: .2s ease-in-out;
+}
+
+.project-layer a:hover {
+    transform: scale(1.1);
+}
+
+.project-layer a i {
+    font-size: 3.5rem;
+
+}
+
+
+
+/* WHEN I HOVER OVER THE PROJECT-BOX THE PROJECT-LAYER WILL TRANSFORM FROM translateY(100%) to translate(0) */
+
+.project-box:hover .project-layer {
+    transform: translateY(0);
+}
+
+
+
+/* CONTACT SECTION */
+
+.contact{
+    background: var(--secondary-bg-color);
+}
+
+/* CONTACT SECTION-HEADING */
+
+.contact h2 {
+    margin-bottom: 2rem;
+}
+
+/* FORM INPUTS */
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 1.3rem;
+    margin: 1rem 0;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+
+
+.contact form .btn {
+    font-weight: 500;
+    transition: all 0.25s;
+    cursor: pointer;
+    padding: 1.7rem 5rem;
+}
+
+.contact form .btn:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem 9%;
+}
+
+/* FOOTER COPYRIGHT-TEXT */
+.footer-text p {
+    font-size: 1rem;
+}
+
+
+/* DEVELOPER CREDITS */
+
+.footer .developer span a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.footer .developer span a:hover {
+    text-decoration: underline;
+}
+
+
+/* TOP ARROW - REDIRECTING BUTTON */
+
+.footer .top-button {
+    background: var(--main-color);
+    padding: 0.1rem 1.1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem var(--main-color);
+    transition: all 0.25s;
+    animation:float-button 1s ease-in-out infinite;
+
+}
+@keyframes float-button {
+
+    0%{
+        transform:translateY(0);
+    }
+    
+    50%{
+        transform:translateY(-0.9rem);
+    }
+    
+    100%{
+        transform:translateY(0);
+    }
+    
+    
+}
+
+.footer .top-button a {
+    font-size: 3rem;
+}
+
+.footer .top-button:hover {
+    transform: scale(1.1);
+    box-shadow: none;
+
+}
+
+
+
+
+/*--------- BREAKPOINTS----------- */
+
+@media (max-width:1200px) {
+
+    html {
+        font-size: 55%;
+    }
+}
+
+
+@media (max-width:991px) {
+
+    .header {
+        padding: 2rem 3%;
+    }
+
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+
+}
+
+
+@media (min-width:649px) and (max-width:990px){
+
+    .about .about-image img {
+        display: none;
+    }
+
+    .about .about-content {
+        margin: 6rem 6rem;
+        padding-top: 4rem;
+    }
+
+    .about .about-content .heading,
+    .about .about-content h3
+    {
+
+        padding: 0 3rem;
+    }
+
+    .about .about-content a {
+        margin: 0 3rem;
+    }
+
+    
+
+   
+
+    .about .about-content p{
+        font-size: .1rem;
+        padding: 0 3rem;
+    }
+
+
+    
+}
+
+
+@media (max-width:648px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .header {
+        padding: 3rem 6rem;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid var(--secondary-bg-color);
+        box-shadow: 0 0 2rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+        /* border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem; */
+        border-radius: 2rem;
+        border-left: .1rem solid var(--main-color);
+        border-right: .1rem solid var(--main-color);
+        border-bottom: .1rem solid var(--main-color);
+        box-shadow: 0 0 1rem var(--main-color);
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem;
+        text-align: center;
+    }
+
+    #menu-icon {
+        transition: all 0.25s;
+
+
+    }
+
+    .navbar.active {
+        animation-name: rotate;
+        animation-duration: 1s;
+    }
+
+    .navbar.active a:hover {
+        transform: scale(1.1);
+    }
+
+    #menu-icon:hover {
+        transform: scale(1.1);
+        color: var(--main-color);
+    }
+
+
+    /* HOME SECTION */
+
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content {
+        margin-top: 9rem;
+        text-align: center;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-image img {
+        text-align: center;
+        width: 100%;
+        margin: 3rem auto;
+    }
+
+    .home-image img:hover {
+        transform: scale(1.2);
+    }
+
+    .about .about-image {
+        display: none;
+    }
+
+    .about-content {
+        margin: 6rem 3rem;
+    }
+
+    .about .about-content .heading {
+        font-size: 4rem;
+        text-align: center;
+
+    }
+
+    .about .about-content h3 {
+        text-align: center;
+    }
+
+    .about .about-content p {
+        text-align: center;
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+    }
+
+    .about .about-content .btn {
+        text-align: center;
+        display: block;
+        margin: 1.2rem 2.3rem 1.2rem 1.2rem;
+
+    }
+
+
+    /* PROJECT SECTION */
+
+    .project-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-container .project-box {
+        margin: 0 3rem 2rem 3rem;
+    }
+
+    .project-container .project-box .project-layer {
+        transform: translateY(0);
+    }
+
+
+   
+
+    .contact form  {
+        margin: 2rem 3rem;
+    }
+
+    .contact form .btn {
+        margin-top: 3rem;
+    }
+
+
+
+    .footer {
+        flex-direction: column;
+    }
+    .footer .footer-text{
+        
+        line-height: 2.5;
+    }
+
+    .footer .developer{
+        margin-bottom: 4rem;
+    }
+
+
+
+
+
+
+    @keyframes rotate {
+        0% {
+            transform: translateY(1rem);
+        }
+
+        25% {
+            transform: translateY(2rem);
+        }
+
+
+
+    }
+}
+
+
+/* HAMBURGER MENU STYLINGS*/
+
+/* HAMBURGER MENU  */
+.bx-menu {
+    transition: all .25s;
+
+}
+
+.bx-x {
+    transition: all 0.25s;
+}
+
+.bx-x {
+    transform: rotate(-90deg);
+}
+
+@media (max-width:617px){
+    .project-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width:417px){
+
+    html{
+        font-size: 50%;
+    }
+
+
+    .footer {
+        text-align: center;
+        
+    }
+
+    .footer .footer-text {
+        line-height:1.5;
+        margin: 2rem 0;
+    }
+}
+
+
+@media (max-width:365px){
+    
+    .about .about-content p{
+        text-align: center;
+    }
+}
+
+
+.float-btn{
+    animation:float-click-button 1s ease-in-out infinite;
+
+}
